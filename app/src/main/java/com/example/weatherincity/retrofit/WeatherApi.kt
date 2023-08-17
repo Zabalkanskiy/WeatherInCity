@@ -6,8 +6,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface WeatherApi {
-    //need add your Api key!!!
-   // @GET("forecast.json?q={city}&days=5&key=07ffa400e8cb41f1b6b111917231408")
     @GET("forecast.json?days=5&key=07ffa400e8cb41f1b6b111917231408")
     suspend fun getWeather(@Query("q") city :String): WeatherData
 }

@@ -18,19 +18,7 @@ object RetrifitApiService {
 
     fun weatherService(): WeatherApi = retrofit.create(WeatherApi::class.java)
 
-    fun loadingWeatherData(city: String): WeatherData?{
-        var weatherData: WeatherData? = null
-        CoroutineScope(Dispatchers.Main).launch {
-            var weatherData: WeatherData? = null
-           val job = CoroutineScope(Dispatchers.IO).launch {
-              weatherData =  weatherService().getWeather(city)
-            }
-            job.join()
 
-        }
-
-        return weatherData
-    }
 
 
 }

@@ -1,5 +1,7 @@
 package com.example.weatherincity.model
 
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -34,13 +36,7 @@ class ViewModel : ViewModel(){
     }
     val retrofit = RetrifitApiService
 
-    fun getWeatherData(city: String): WeatherData?{
-       return retrofit.loadingWeatherData(city)
 
 
-    }
 
-    fun getFiveDayData(weatherData: WeatherData): List<Forecastday>{
-       return weatherData.forecast.forecastday
-    }
 }
