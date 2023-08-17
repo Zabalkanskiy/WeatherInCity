@@ -214,11 +214,7 @@ fun NewWeatherIcon(forecastDay: Forecastday, modifier: Modifier, weatherData: We
     }
 }
 
-//hidden apiKey
-val ai: ApplicationInfo = WeatherApplication.getAppContext().packageManager
-    .getApplicationInfo(WeatherApplication.getAppContext().packageName, PackageManager.GET_META_DATA)
-val value = ai.metaData["API_KEY_NAME"]
-val key = value.toString()
+
 
 
 
